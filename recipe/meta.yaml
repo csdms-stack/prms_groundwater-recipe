@@ -43,7 +43,7 @@ test:
 about:
   home: https://www.usgs.gov/software/precipitation-runoff-modeling-system-prms
   license: CCO 1.0 Universal
-  license_file: License.md
+  # license_file: License.md
   summary: USGS Precipitation Runoff Modeling System (PRMS) Groundwater component
   description: |
     The Precipitation-Runoff Modeling System (PRMS) is a
