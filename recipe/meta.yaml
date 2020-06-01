@@ -1,7 +1,7 @@
 {% set name = "prms_groundwater" %}
 {% set version = "0.2" %}
-# {% set release = "beta" %}
 {% set build_number = "0" %}
+{% set development = false %}
 
 package:
   name: {{ name }}
@@ -9,12 +9,18 @@ package:
 
 source:
   git_url: https://github.com/nhm-usgs/bmi-prms6-groundwater
+{%- if development %}
+  git_rev: 27305cd2cadd20b2c48e35f64f901a046809d8a2
+{%- else %}
   git_rev: v{{ version }}
-  # git_rev: 27305cd2cadd20b2c48e35f64f901a046809d8a2
+{%- endif %}
 
 build:
+{%- if development %}
+  string: beta_{{ build_number }}
+{%- else %}
   number: {{ build_number }}
-  # string: {{ release }}_{{ build_number }}
+{%- endif %}
 
 requirements:
   build:
