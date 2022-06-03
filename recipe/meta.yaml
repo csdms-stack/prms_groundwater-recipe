@@ -10,7 +10,7 @@ package:
 source:
   git_url: https://github.com/nhm-usgs/bmi-prms6-groundwater
 {%- if development %}
-  git_rev: 5146e98c9a0d1fb843c4f7265591d4986df802cf
+  git_rev: e3b2c118295d9139448a0f5770216c7f2a07bacf
 {%- else %}
   git_rev: v{{ version }}
 {%- endif %}
